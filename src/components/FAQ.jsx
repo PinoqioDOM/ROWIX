@@ -50,20 +50,22 @@ export default function FAQ() {
   };
 
   return (
-    <div className="mt-6 rounded-2xl border border-[#CE7D63] p-6">
+    <div className="mt-4 sm:mt-6 rounded-2xl border border-[#CE7D63] p-4 sm:p-5 md:p-6">
       <div>
         {/* Header */}
-        <div className="flex items-center justify-between bg-[#1A1A1A] mb-8 p-6 border border-[#2A2A2A] rounded-2xl">
-          <h1 className="text-white text-4xl font-bold">FREQUENTLY ASKED QUESTIONS</h1>
-          <button className="flex items-center gap-2 px-4 py-2 rounded-xl text-gray-400 transition-colors hover:bg-[#CE7D63] hover:text-black transition-all duration-300 cursor-pointer">
-            <ArrowUpRight className="w-4 h-4" />
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between bg-[#1A1A1A] mb-6 sm:mb-8 p-4 sm:p-5 md:p-6 border border-[#2A2A2A] rounded-2xl gap-3 sm:gap-0">
+          <h1 className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold">
+            FREQUENTLY ASKED QUESTIONS
+          </h1>
+          <button className="flex items-center gap-2 px-3 sm:px-4 py-2 rounded-xl text-gray-400 text-xs sm:text-sm transition-colors hover:bg-[#CE7D63] hover:text-black transition-all duration-300 cursor-pointer whitespace-nowrap">
+            <ArrowUpRight className="w-3 h-3 sm:w-4 sm:h-4" />
             <span>VIEW ALL</span>
           </button>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
           {/* FAQ List */}
-          <div className="space-y-4">
+          <div className="space-y-3 sm:space-y-4">
             {faqs.map((faq, index) => (
               <div
                 key={index}
@@ -71,22 +73,22 @@ export default function FAQ() {
               >
                 <button
                   onClick={() => toggleFAQ(index)}
-                  className="w-full flex items-center justify-between p-6 text-left hover:bg-[#1A1A1A] transition-colors"
+                  className="w-full flex items-center justify-between p-4 sm:p-5 md:p-6 text-left hover:bg-[#1A1A1A] transition-colors"
                 >
-                  <span className="text-white text-base font-medium pr-4">
+                  <span className="text-white text-sm sm:text-base font-medium pr-3 sm:pr-4">
                     {faq.question}
                   </span>
-                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#2A2A2A] flex items-center justify-center">
+                  <div className="flex-shrink-0 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#2A2A2A] flex items-center justify-center">
                     {openIndex === index ? (
-                      <Minus className="w-4 h-4 text-white" />
+                      <Minus className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white" />
                     ) : (
-                      <Plus className="w-4 h-4 text-white" />
+                      <Plus className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white" />
                     )}
                   </div>
                 </button>
                 {openIndex === index && (
-                  <div className="px-6 pb-6">
-                    <p className="text-gray-400 text-sm leading-relaxed">
+                  <div className="px-4 sm:px-5 md:px-6 pb-4 sm:pb-5 md:pb-6">
+                    <p className="text-gray-400 text-xs sm:text-sm leading-relaxed">
                       {faq.answer}
                     </p>
                   </div>
@@ -96,11 +98,11 @@ export default function FAQ() {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-[#151515] rounded-lg border border-[#2A2A2A] p-8">
-            <h2 className="text-white text-2xl font-bold mb-6">ASK YOUR QUESTION</h2>
-            <div className="space-y-6">
+          <div className="bg-[#151515] rounded-lg border border-[#2A2A2A] p-5 sm:p-6 md:p-8">
+            <h2 className="text-white text-xl sm:text-2xl font-bold mb-5 sm:mb-6">ASK YOUR QUESTION</h2>
+            <div className="space-y-4 sm:space-y-6">
               <div>
-                <label className="block text-white text-sm font-medium mb-2">
+                <label className="block text-white text-xs sm:text-sm font-medium mb-2">
                   NAME
                 </label>
                 <input
@@ -109,12 +111,12 @@ export default function FAQ() {
                   value={formData.name}
                   onChange={handleChange}
                   placeholder="Enter your name"
-                  className="w-full px-4 py-3 bg-[#0A0A0A] border border-[#2A2A2A] rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-[#CE7D63] transition-colors"
+                  className="w-full px-3 sm:px-4 py-2.5 sm:py-3 bg-[#0A0A0A] border border-[#2A2A2A] rounded-lg text-white text-sm placeholder-gray-500 focus:outline-none focus:border-[#CE7D63] transition-colors"
                 />
               </div>
 
               <div>
-                <label className="block text-white text-sm font-medium mb-2">
+                <label className="block text-white text-xs sm:text-sm font-medium mb-2">
                   EMAIL
                 </label>
                 <input
@@ -123,12 +125,12 @@ export default function FAQ() {
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="Enter your email"
-                  className="w-full px-4 py-3 bg-[#0A0A0A] border border-[#2A2A2A] rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-[#CE7D63] transition-colors"
+                  className="w-full px-3 sm:px-4 py-2.5 sm:py-3 bg-[#0A0A0A] border border-[#2A2A2A] rounded-lg text-white text-sm placeholder-gray-500 focus:outline-none focus:border-[#CE7D63] transition-colors"
                 />
               </div>
 
               <div>
-                <label className="block text-white text-sm font-medium mb-2">
+                <label className="block text-white text-xs sm:text-sm font-medium mb-2">
                   YOUR QUESTION
                 </label>
                 <textarea
@@ -137,13 +139,13 @@ export default function FAQ() {
                   onChange={handleChange}
                   placeholder="Enter Your Question Here ....."
                   rows="5"
-                  className="w-full px-4 py-3 bg-[#0A0A0A] border border-[#2A2A2A] rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-[#CE7D63] transition-colors resize-none"
+                  className="w-full px-3 sm:px-4 py-2.5 sm:py-3 bg-[#0A0A0A] border border-[#2A2A2A] rounded-lg text-white text-sm placeholder-gray-500 focus:outline-none focus:border-[#CE7D63] transition-colors resize-none"
                 />
               </div>
 
               <button
                 onClick={handleSubmit}
-                className="w-full py-4 bg-[#CE7D63] hover:bg-[#B86D53] text-black font-bold rounded-lg transition-colors"
+                className="w-full py-3 sm:py-4 bg-[#CE7D63] hover:bg-[#B86D53] text-black text-sm sm:text-base font-bold rounded-lg transition-colors"
               >
                 SEND YOUR MESSAGE
               </button>
