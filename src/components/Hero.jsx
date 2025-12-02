@@ -61,10 +61,10 @@ export default function Hero() {
           <div className="w-100 flex items-center gap-4 animate-scroll">
             {[...services, ...services, ...services].map((service, index) => (
               <div key={index} className="flex items-center gap-8 whitespace-nowrap shrink-0">
-                <span className="text-[#B3B3B2] text-sm mt-1 text-center font-mono tracking-wider transition-colors hover:text-orange-900 cursor-pointer">
+                <span className="text-[#B3B3B2] text-sm mt-1 text-center font-mono tracking-wider transition-colors hover:text-[#CE7D63] cursor-pointer">
                   {service.name}
                 </span>
-                <span className="text-amber-900 text-2xl">•</span>
+                <span className="text-[#CE7D63] text-2xl">•</span>
               </div>
             ))}
           </div>
