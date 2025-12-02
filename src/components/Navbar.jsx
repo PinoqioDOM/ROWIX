@@ -12,7 +12,7 @@ const Navbar = () => {
               <a 
                 key={link} 
                 href={`#${link.toLowerCase()}`} 
-                className="text-white font-bold hover:text-gray-300 bg-black px-6 py-4 rounded-xl transition"
+                className="text-white font-bold bg-black px-6 py-4 rounded-xl transition cursor-pointer hover:bg-[#DA9E8B] hover:text-black transition-all duration-500"
               >
                 {link}
               </a>

@@ -40,12 +40,12 @@ export default function Hero() {
           </button>
         </div>
 
-        <p className="text-gray-400 text-lg  leading-relaxed">
+        <p className="text-gray-400 text-lg leading-relaxed">
           At NexGen, we believe in the transformative power of digital solutions. Our team of experts is dedicated to helping businesses like yours thrive in the fast-paced digital landscape.
         </p>
 
         {/* Services Ticker */}
-        <div className="relative overflow-hidden py-4 bg-black rounded-2xl " style={{ height: '60px' }}>
+        <div className="relative overflow-hidden py-4 bg-black rounded-2xl" style={{ height: '70px' }}>
           <style>{`
             @keyframes scroll {
               0% { transform: translateX(0); }
@@ -61,10 +61,10 @@ export default function Hero() {
           <div className="w-100 flex items-center gap-4 animate-scroll">
             {[...services, ...services, ...services].map((service, index) => (
               <div key={index} className="flex items-center gap-8 whitespace-nowrap shrink-0">
-                <span className="text-gray-500 text-sm text-center font-mono tracking-wider transition-colors hover:text-orange-900 cursor-pointer">
+                <span className="text-[#B3B3B2] text-sm mt-1 text-center font-mono tracking-wider transition-colors hover:text-orange-900 cursor-pointer">
                   {service.name}
                 </span>
-                <span className="text-orange-900">•</span>
+                <span className="text-amber-900 text-2xl">•</span>
               </div>
             ))}
           </div>
