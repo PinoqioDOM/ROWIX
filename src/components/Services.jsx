@@ -45,7 +45,7 @@ export default function Services() {
             <h1 className='text-3xl font-semibold text-white tracking-widest'>OUR SERVICES</h1>
           </div>
 
-          <div className='grid grid-cols-1 gap-2 md:grid-cols-2'>
+          <div className='grid grid-cols-1 gap-4 md:grid-cols-2'>
             {services.map((service, index) => {
               const Icon = service.icon
               const isLastRow = index >= 2
